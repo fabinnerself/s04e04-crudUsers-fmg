@@ -3,7 +3,7 @@
 ## ¡CRUD de usuarios !
 
 Esta aplicación web, construida con ReactJS y Vite, te permite registrar, editar, eliminar y listar usuarios. Se validan los campos de entrada con react-hook-form y yup. Tiene paginacion en los registros. Uso de iconos react-icons.github.io, uso de ventanas modales para mensajes de alerta en las operaciones.
-![main](crud-users-main.png)
+![main](crud-user-main.png)
 
 
 ## Caracteristicas
