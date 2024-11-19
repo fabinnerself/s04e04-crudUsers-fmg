@@ -8,14 +8,14 @@ Esta aplicación web, construida con ReactJS y Vite, te permite registrar, edita
 
 ## Caracteristicas
 
-- **Datos completos:** : Muestra nombres, correo electronico y fecha de nacimiento.
+- **Datos completos:** : Muestra nombres, correo electronico, contraseña y fecha de nacimiento.
 
 - **Interfaz intuitiva:** Diseño moderno y fácil de usar, optimizado para diferentes dispositivos.
 
-- **Validacion Rbusta:** : Se validan los campos de entrada de manera personalizada con react-hook-form y yup. Los campos se validan en tiempo real  para garantizar la integridad de los datos. Se validan:
+- **Validacion Robusta:** : Se validan los campos de entrada de manera personalizada con react-hook-form y yup. Los campos se validan en tiempo real  para garantizar la integridad de los datos. Se validan:
 Nombres: Mínimo 3 caracteres, solo letras .
 Correo electrónico: Formato de correo electrónico válido.
-Fecha de nacimiento: Formato de fecha válido (DD/MM/AAAA) no valido fechas futuras yan teriores a 1950.
+Fecha de nacimiento: Formato de fecha válido (MM/DD/AAAA) no valido fechas futuras y anteriores a 1950.
 
 - **Componentes reutilizables:** : Estructura modular del código para facilitar el mantenimiento.
 
@@ -31,7 +31,7 @@ Fecha de nacimiento: Formato de fecha válido (DD/MM/AAAA) no valido fechas futu
 
 - **Licencia:**  MIT se puede usar para cualquier proyecto personal o comercial mientras se mantenga este README.md, mi nombre y la licencia MIT.
  
-Puedes visitar la plataforma en línea en [https://s03e03-rm-fmg.vercel.app/](https://s03e03-rm-fmg.vercel.app/)
+Puedes visitar la plataforma en línea en [https://crud-users-fmg.vercel.app//](https://crud-users-fmg.vercel.app/)
 
 ## Requisitos del Sistema
 
