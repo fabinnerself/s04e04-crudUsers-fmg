@@ -64,7 +64,7 @@ Las contribuciones son bienvenidas. Si encuentras algún error o deseas agregar 
 
 ## Imagenes
 
-Pantalla principal ![main](crud.png)
+Pantalla adicionar ![main](crud.png)
 
 ## Comandos Útiles
 
@@ -78,15 +78,9 @@ node -v
 
 npm -v
 
-## Instalación
-
-estructura del proyecto
-
 ## Estructura del proyecto
 
- ## Instalación
-
-Estrcutura del proyecto
+La estructura del proyecto es:
 ```
 index.html
 readme.md
@@ -108,6 +102,7 @@ readme.md
            └── header-img.png
 
 ```
+# Instalación
 
 Para instalar bajar el proyecto del repositorio:
 
@@ -119,3 +114,4 @@ cd  s04e04-crudUsers-fmg
 
 npm i axios react-hook-form yup
 
+(C) Fabian M.G. 2024 
