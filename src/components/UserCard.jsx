@@ -7,6 +7,7 @@ import { LiaBirthdayCakeSolid } from "react-icons/lia";
 import './card.css'
 
 function UserCard({user, openEdit, deleteUser}) {
+  const birthday = new Date(user?.birthday).toLocaleDateString();
   return (<>
     <div  className='card'>
       <h3 className='card__title'>
@@ -21,7 +22,7 @@ function UserCard({user, openEdit, deleteUser}) {
         <div >
           <span className='card__label'><LiaBirthdayCakeSolid className='card__icon' />Birthday: </span>
           <span className='card__value'>
-          {user?.birthday && new Date(user.birthday).toLocaleDateString()} </span>
+          { birthday } </span>
         </div>
       </div>
       <div className='card__btns'>

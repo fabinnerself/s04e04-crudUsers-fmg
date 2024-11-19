@@ -8,14 +8,16 @@ Esta aplicación web, construida con ReactJS y Vite, te permite registrar, edita
 
 ## Caracteristicas
 
-- **Datos completos:** : Muestra nombres, correo electronico, contraseña y fecha de nacimiento.
+- **Datos completos:** : Muestra nombres, correo electronico, contraseña (con opcion de visibilidad) y fecha de nacimiento.
 
 - **Interfaz intuitiva:** Diseño moderno y fácil de usar, optimizado para diferentes dispositivos.
 
 - **Validacion Robusta:** : Se validan los campos de entrada de manera personalizada con react-hook-form y yup. Los campos se validan en tiempo real  para garantizar la integridad de los datos. Se validan:
-Nombres: Mínimo 3 caracteres, solo letras .
-Correo electrónico: Formato de correo electrónico válido.
-Fecha de nacimiento: Formato de fecha válido (MM/DD/AAAA) no valido fechas futuras y anteriores a 1950.
+    - Nombres: Primer nombre y apellido, mínimo 3 caracteres, solo letras.
+
+    - Correo electrónico: Formato de correo electrónico válido.
+
+    - Fecha de nacimiento: Formato de fecha válido (MM/DD/AAAA) no valido fechas futuras y anteriores a 1950.
 
 - **Componentes reutilizables:** : Estructura modular del código para facilitar el mantenimiento.
 
@@ -90,13 +92,14 @@ readme.md
     ├── index.css
     ├── components/
     │   ├── AddEdit.jsx
-    │   ├── cards.jsx
     │   └── Modal.jsx
     │   └── UserList.jsx
     │   └── UserCard.jsx
     ├── hooks/
     │   ├── useFetch.jsx
     │   └── usePagination.jsx
+    ├── layout/        
+    │   └── Layout.jsx
     └──  assets/
         └── img/
            └── header-img.png

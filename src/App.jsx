@@ -9,6 +9,7 @@ import { FiLoader } from "react-icons/fi";
 import { PiCheckFat } from "react-icons/pi";
 import { RiUserAddLine } from "react-icons/ri";
 import { header } from './assets/img'
+import { FcOk } from "react-icons/fc";
 
 const baseURL = "https://users-crud-api-81io.onrender.com/api/v1"
 
@@ -46,7 +47,9 @@ function App() {
       setCurrentChild(
          <div className='header__modal'> 
             <h2 className='header__modal-text'>Confirm Delete</h2> 
-            <p>Are you sure you want to delete the register of the user ?</p>  
+            <p>Are you sure you want to delete </p>  
+            <p>the register of the user ?</p> 
+            <p className='header__space'> &nbsp;</p>             
             <div className="header__actions">     
                <button onClick={() => confirmDelete(userId)} className="header__confirm">Delete</button>   
                <button onClick={cancelDelete} className="header__close-button">Cancel</button> 
@@ -70,8 +73,10 @@ function App() {
       setCurrentChild(
          <div className='header__modal'> 
             <h2 className='header__modal-text'>Update Completed</h2> 
-            <p>User record has been updated successfully</p>  
-            <p><PiCheckFat /></p> 
+            <p>User record has been </p> 
+            <p>updated successfully</p>
+            <p className='header__space'> &nbsp;</p>
+            <p><FcOk className='btn__icon-large' /></p> 
          </div>
       )
       
@@ -90,10 +95,22 @@ function App() {
       })
       setIsOpen(false)
 
+      
+      setIsOpen(true)
+      setCurrentChild(
+         <div className='header__modal'> 
+            <h2 className='header__modal-text'>Creation Completed</h2> 
+            <p>User record has been </p> 
+            <p>added successfully</p>
+            <p className='header__space'> &nbsp;</p>
+            <p><FcOk className='btn__icon-large' /></p> 
+         </div>
+      )
+      
       setTimeout(() => {
-         setIsOpen(true)
-         setCurrentChild(<p><PiCheckFat /> User updated successfully</p>)
-      },0)      
+         setIsOpen(false)
+      }, 2000)
+          
    }
 
    const readUsers = () => {
