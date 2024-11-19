@@ -1,0 +1,9 @@
+.cards__pagination{
+  background-color: var(--color-secondary);
+    text-align: center;
+  }
+
+  .cards__btn{
+    /* color: transparent; */
+    width: 2.9em;
+  }

@@ -1,0 +1,75 @@
+.card{
+    border: 2px solid var(--color-border);
+    background-color: var(--color-quaternary);
+    padding: 1em;    
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-radius: 6px;
+    
+}
+
+.card__title{
+    border-bottom: 1px solid var(--color-border);    
+    text-transform: uppercase;
+    padding-bottom: 1em;
+    color: var(--color-octonary);
+}
+
+ 
+
+.card__label {
+    display: block;
+    text-transform: uppercase;
+    color: var(--color-border);
+    font-size: medium; 
+}
+
+.card__icon{
+    font-size: x-large;
+    color: var(--color-border);
+}         
+ 
+.card__value{
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+}
+
+.card__btns{
+    border-top: 1px solid var(--color-border);    
+    padding-top: 0.6em;
+    display: inline-flex;
+    justify-content: flex-end;
+    gap: 0.5em;
+}
+
+.btn--delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fd5f5f;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+}
+
+.btn--edit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-quinary);
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid #aaa;
+    font-size: 18px;
+}
+
+.btn--edit:hover{ 
+    transform: scale(1.2);
+  }
+
+  .btn--delete:hover{ 
+    transform: scale(1.2);
+  }

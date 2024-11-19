@@ -1,0 +1,124 @@
+:root {
+  --color-primary: #2c7da0;
+  --color-secondary: #bbe8fd;
+  --color-success: #009CDE;
+  --color-danger: #FF3D68;
+  --color-tertiary: #F7B500;
+  --color-quaternary: #70d6ff;
+  --color-quinary: #76B041;
+  --color-senary: #a2d2ff;
+  --color-septenary: #bde0fe;
+  --color-octonary: #f87575;
+  --color-white: #fff;
+  --color-border: #598392;
+  --color-gray: #669bbc;
+  --border-radius: 8px;
+  --padding-standard: 20px;
+  --shadow-standard: 0 0 20px #0000001a;
+}
+
+
+.header{
+  background-color: var(--color-primary);
+  color: var(--color-octonary);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 110px;
+  box-shadow: 0 2px 4px 0  #00000035;
+  z-index: 5;
+}
+
+.header__container{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 1.1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+}
+
+.btn{
+    background-color: var(--color-success);
+  border: 1px solid aquamarine;
+  outline: 1px solid fff;
+  outline-offset: -2px;
+  border-radius: 6px;
+  padding: 0.5em 1.25em;
+  font-weight: 500;
+  color: #fff;
+}
+
+.btn:hover{ 
+  transform: scale(1.05);
+}
+
+.cards{
+  background-color: var(--color-secondary);
+    display: grid;    
+    gap: 1.5em;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 1.2em;
+}
+           
+.btn__icon{
+  font-size: 1.5em;
+}
+
+.header__confirm{
+  background-color: #fd5f5f;
+  color: #fff;
+}
+.header__close-button{
+  background-color: var(--color-success) ;
+  color: #fff;
+}
+
+.header__actions{
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.header__modal{
+  width: 550px;
+  display: flex;
+  flex-direction: column;  
+  background-color: val(--color-senary);
+  padding: 1em; 
+}
+
+.header__modal p{
+  width: 100%;
+  text-align: center;  
+} 
+
+.header__modal-text{
+  text-align: center;  
+  margin: 0 auto;
+  
+}
+
+.header__img{
+  width: 10%;
+  height: auto;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+
+}
+.header__loading{
+  background-color: var(--color-secondary);
+}
+ 
+/* ===========FOOTER============*/
+footer{  
+  background-color: var(--color-primary);
+  color: var(--color-septenary);
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;    
+  bottom: 0;
+  z-index: 0;
+}
