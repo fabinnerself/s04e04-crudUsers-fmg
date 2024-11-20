@@ -29,6 +29,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 0.5em 0.75em;
+    font-family: inherit;
 }
 
 .form__submit{

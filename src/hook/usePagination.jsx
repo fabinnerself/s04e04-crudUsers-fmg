@@ -3,6 +3,12 @@ import { useState } from 'react'
 function usePagination(itemsPerPage,totalItems,residents) {
     const [page, setPage] = useState(1)
   
+    if(!totalItems) {
+      console.log("totalItems is required")
+      
+      return [page,1,()=>{}, ()=>{}, [], [], () => {}]
+    }
+  
     const maxPage = Math.ceil(totalItems / itemsPerPage)
 
     const onPrev = () => {

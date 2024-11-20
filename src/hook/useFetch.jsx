@@ -7,7 +7,14 @@ function useFetch () {
   const [loading, setLoading] = useState(false)
 
   async function dataFetch ({ url, method = 'get', id = null, body = null }) {
+    
+    if(!url){
+      console.log("url is required")
+      return [data, setData, loading, error]
+    }
+
     console.log('body ',body)
+
     setLoading(true)
 
     url = `${url}${id ? `/${id}/` : ''}`

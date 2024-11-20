@@ -1,23 +1,29 @@
-import './App.css' 
+
 import React, { useState , useEffect } from 'react'
 import useFetch from './hook/useFetch'
 import Layout from './layouts/Layout'
 import AddEdit from './components/AddEdit'
 import UserList from './components/UserList'
 import Modal from './components/Modal'
+
 import { FiLoader } from "react-icons/fi";
-import { PiCheckFat } from "react-icons/pi";
 import { RiUserAddLine } from "react-icons/ri";
-import { header } from './assets/img'
 import { FcOk } from "react-icons/fc";
+
+import Search from './components/Search'
+import { filtrarUsuarios } from './assets/js/searchUser'
+import { header } from './assets/img'
+import './App.css' 
 
 const baseURL = "https://users-crud-api-81io.onrender.com/api/v1"
 
-function App() {
+function App() { 
 
    const [users, setUsers, loading] = useFetch()
    const [isOpen, setIsOpen] =  useState(false)
    const [currentChild, setCurrentChild] =  useState(null)
+   const [queryUser, setQueryUser] = useState("")
+   const [filteredUsers, setFilteredUsers] = useState([])
 
    /* reset page */
    const [resetPage, setResetPage] = useState(false);
@@ -26,6 +32,25 @@ function App() {
       readUsers()      
    }, [])
 
+   useEffect(() => {      
+   
+      if (users && queryUser) {
+         console.log("APP queryUser ",queryUser)
+         const filtered = filtrarUsuarios(users, queryUser)
+         setFilteredUsers(filtered)   
+         setResetPage(true)      
+      }  
+      else {
+         setFilteredUsers(users)
+      }
+
+      
+   },[users,queryUser])
+
+
+   const handleSearch = (searchTerm) => {
+      setQueryUser(searchTerm)
+    }   
 
    const cancelDelete = () => {
       setIsOpen(false)
@@ -137,7 +162,8 @@ function App() {
          <div className='header__container'>
             <div>
                <h1 className='header__title'><img className='header__img' src={header} alt='header'></img>User's APP</h1> 
-               <div  >Number of records: {users?.length}</div>
+               <div  >Number of records: {filteredUsers?.length}</div>
+               <Search setQueryUser={handleSearch} />
             </div>
             
             <div className='header__button'>
@@ -151,7 +177,7 @@ function App() {
         {currentChild}
       </Modal>
       <div>
-         {loading ? (<h1 className='header__loading'><FiLoader />Loading...<FiLoader /></h1>) : (<UserList users={users} openEdit={openEdit} deleteUser={deleteUser} resetPage={resetPage} setResetPage={setResetPage} />)}
+         {loading ? (<h1 className='header__loading'><FiLoader />Loading...<FiLoader /></h1>) : (<UserList users={filteredUsers} openEdit={openEdit} deleteUser={deleteUser} resetPage={resetPage} setResetPage={setResetPage} />)}
       </div> 
         </Layout>
         
