@@ -33,7 +33,7 @@ Esta aplicación web, construida con ReactJS y Vite, te permite registrar, edita
 
 - **Licencia:**  MIT se puede usar para cualquier proyecto personal o comercial mientras se mantenga este README.md, mi nombre y la licencia MIT.
  
-Puedes visitar la plataforma en línea en [https://crud-users-fmg.vercel.app//](https://crud-users-fmg.vercel.app/)
+Puedes visitar la plataforma en línea en [https://crud-users-fmg.vercel.app/](https://crud-users-fmg.vercel.app/)
 
 ## Requisitos del Sistema
 
