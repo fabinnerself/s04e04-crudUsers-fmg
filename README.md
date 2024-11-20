@@ -1,88 +1,88 @@
-# Gestionar usuarios  
+# Manage Users
 
-## ¡CRUD de usuarios !
+## User CRUD!
 
-Esta aplicación web, construida con ReactJS y Vite, te permite registrar, editar, eliminar, buscar y listar usuarios. Se validan los campos de entrada con react-hook-form y yup. Tiene paginacion en los registros. Uso de iconos react-icons.github.io, uso de ventanas modales para mensajes de alerta en las operaciones.
+This web application, built with ReactJS and Vite, allows you to register, edit, delete, search, and list users. Input fields are validated using react-hook-form and yup. It includes pagination for records. It utilizes icons from react-icons.github.io and modal windows for alert messages during operations.
 ![main](crud-user-main.png)
 
+Para la versión en español de este documento, haga clic [aquí](README_ES.md).
 
-## Caracteristicas
+## Features
 
-- **Datos completos:** : Muestra nombres, correo electronico, contraseña (con opcion de visibilidad) y fecha de nacimiento.
+- **Complete Data:** Displays names, email addresses, passwords (with visibility option), and birth dates.
 
-- **Interfaz intuitiva:** Diseño moderno responsivo y fácil de usar, optimizado para diferentes dispositivos.
+- **Intuitive Interface:** Modern responsive design that is easy to use, optimized for various devices.
 
-- **Validacion Robusta:** : Se validan los campos de entrada de manera personalizada con react-hook-form y yup. Los campos se validan en tiempo real  para garantizar la integridad de los datos. Se validan:
-    - Nombres: Primer nombre y apellido, mínimo 3 caracteres, solo letras.
+- **Robust Validation:** Input fields are custom validated with react-hook-form and yup. Fields are validated in real-time to ensure data integrity. The following fields are validated:
+    - Names: First name and last name, minimum 3 characters, letters only.
+    - Email: Valid email format.
+    - Birth Date: Valid date format (MM/DD/YYYY), does not allow future dates or dates prior to 1950.
 
-    - Correo electrónico: Formato de correo electrónico válido.
+- **Reusable Components:** Modular code structure for easier maintenance.
 
-    - Fecha de nacimiento: Formato de fecha válido (MM/DD/AAAA) no valido fechas futuras y anteriores a 1950.
+- **Hooks:** Utilizes useState, useEffect, useRef hooks, custom hook for connecting to the REST API and pagination.
 
-- **Componentes reutilizables:** : Estructura modular del código para facilitar el mantenimiento.
+- **CSS:** Styles the application.
 
-- **Hooks:** Utiliza los hooks useState, useEffect, useRef, Hook-form y Custom hook personalizado para la conexión a la rest api y paginacion. 
+- **ReactJS:** JavaScript framework for building user interfaces.
 
-- **CSS:**  Estiliza la aplicación. 
+- **Vite:** Fast frontend build tool based on ES modules.
 
-- **ReactJS:**  Framework JavaScript para crear interfaces de usuario. 
+- **Icons from react-icons.github.io:** Custom icons to enhance the interface.
 
-- **Vite:**  Herramienta de construcción de frontend rápida y basada en ES modules. 
+- **License:** MIT license allows use for any personal or commercial project as long as this README.md, my name, and the MIT license are maintained.
 
-- **Iconos react-icons.github.io:** : Iconos personalizados para mejorar la interfaz.
+You can visit the online platform at [https://crud-users-fmg.vercel.app/](https://crud-users-fmg.vercel.app/)
 
-- **Licencia:**  MIT se puede usar para cualquier proyecto personal o comercial mientras se mantenga este README.md, mi nombre y la licencia MIT.
- 
-Puedes visitar la plataforma en línea en [https://crud-users-fmg.vercel.app/](https://crud-users-fmg.vercel.app/)
+## System Requirements
 
-## Requisitos del Sistema
+- **Operating System:** Ubuntu 22.04.4 LTS or Windows 10 Pro 1803 
 
-- **Sistema Operativo:** Ubuntu 22.04.4 LTS o Windows 10 Pro 1803 
+- **NodeJS:** Version 18.20.4 or higher 
 
-- **NodeJS:** Versión 18.20.4 o superior 
+- **npm/npx:** Version 10.8.4 or higher 
 
-- **npm/npx:** Versión 10.8.4 o superior 
+- **Vite:** Version 5.4 or higher 
 
-- **Vite::** version 5.4 o superior 
+- **ReactJS:** Version 18.3 or higher 
 
-- **ReactJs:** vesion 18.3 o superior 
-    
-## Sistemas Alternativos Probados
+## Alternative Systems Tested
 
-El proyecto también ha sido probado en el siguiente entorno alternativo:
+The project has also been tested in the following alternative environment:
 
-- **Sistema Operativo:** Windows 10 Pro 1803
+- **Operating System:** Windows 10 Pro 1803
 
 - **NodeJS:** NodeJS: 18.20.4
 
-- **npm/npx:** Versión 10.8.4 o superior 
+- **npm/npx:** Version 10.8.4 or higher 
 
-- **Vite:** version 5.4 o superior 
+- **Vite:** Version 5.4 or higher 
 
-- **ReactJs:** vesion 18.3 o superior 
+- **ReactJS:** Version 18.3 or higher 
 
-## Contribuciones
-Las contribuciones son bienvenidas. Si encuentras algún error o deseas agregar nuevas funcionalidades, no dudes en abrir un issue, una pull  request, o fork en el repositorio.
+## Contributions
 
-## Imagenes
+Contributions are welcome. If you find any bugs or want to add new features, feel free to open an issue, a pull request, or fork the repository.
 
-Pantalla adicionar ![main](crud.png)
+## Images
 
-## Comandos Útiles
+Add Screen ![main](crud.png)
 
-Ver información del sistema:
+## Useful Commands
 
+View system information:
+
+```bash
 uname -r
-
 sb_release -a
-
 node -v
-
 npm -v
+```
 
-## Estructura del proyecto
 
-La estructura del proyecto es:
+## Project Structure
+
+The project structure is:
 ```
 index.html
 readme.md
@@ -106,16 +106,21 @@ readme.md
            └── header-img.png
 
 ```
-# Instalación
+# Installation
 
-Para instalar bajar el proyecto del repositorio:
+To install, download the project from the repository:
 
+```bash
 git clone https://github.com/fabinnerself/s04e04-crudUsers-fmg.git
+```
 
-luego correr:
+```bash
+then run:
 
 cd  s04e04-crudUsers-fmg
 
 npm i axios react-hook-form yup
+```
 
-(C) Fabian M.G. 2024 
+
+(C) Favian M.G. 2024 
