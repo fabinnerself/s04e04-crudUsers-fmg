@@ -1,11 +1,13 @@
 .card{
     border: 2px solid var(--color-border);
     background-color: var(--color-quaternary);
-    padding: 1em;    
+    padding: 1.2em;    
     display: flex;
     flex-direction: column;
     gap: 1em;
     border-radius: 6px;
+    width: 350px;
+    height: 260px;
     
 }
 

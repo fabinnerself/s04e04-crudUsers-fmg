@@ -10,7 +10,7 @@ Esta aplicación web, construida con ReactJS y Vite, te permite registrar, edita
 
 - **Datos completos:** : Muestra nombres, correo electronico, contraseña (con opcion de visibilidad) y fecha de nacimiento.
 
-- **Interfaz intuitiva:** Diseño moderno y fácil de usar, optimizado para diferentes dispositivos.
+- **Interfaz intuitiva:** Diseño moderno responsivo y fácil de usar, optimizado para diferentes dispositivos.
 
 - **Validacion Robusta:** : Se validan los campos de entrada de manera personalizada con react-hook-form y yup. Los campos se validan en tiempo real  para garantizar la integridad de los datos. Se validan:
     - Nombres: Primer nombre y apellido, mínimo 3 caracteres, solo letras.

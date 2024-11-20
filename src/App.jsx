@@ -1,16 +1,15 @@
-
 import React, { useState , useEffect } from 'react'
 import useFetch from './hook/useFetch'
 import Layout from './layouts/Layout'
 import AddEdit from './components/AddEdit'
 import UserList from './components/UserList'
 import Modal from './components/Modal'
+import Search from './components/Search'
 
 import { FiLoader } from "react-icons/fi";
 import { RiUserAddLine } from "react-icons/ri";
 import { FcOk } from "react-icons/fc";
 
-import Search from './components/Search'
 import { filtrarUsuarios } from './assets/js/searchUser'
 import { header } from './assets/img'
 import './App.css' 
@@ -43,7 +42,6 @@ function App() {
       else {
          setFilteredUsers(users)
       }
-
       
    },[users,queryUser])
 
@@ -161,13 +159,13 @@ function App() {
       <div  className='header'>
          <div className='header__container'>
             <div>
-               <h1 className='header__title'><img className='header__img' src={header} alt='header'></img>User's APP</h1> 
+               <h1 className='header__title'>User's APP</h1> 
                <div  >Number of records: {filteredUsers?.length}</div>
                <Search setQueryUser={handleSearch} />
             </div>
             
             <div className='header__button'>
-               <button className='btn' onClick={openAdd}><RiUserAddLine  className='btn__icon' />Add a new user</button>
+               <button className='btn' onClick={openAdd}><RiUserAddLine  className='btn__icon' /> <span className='btn__text'>Add</span></button>
             </div>
            
          </div>

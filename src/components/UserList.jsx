@@ -1,8 +1,7 @@
-import React from 'react'
+import React , { useEffect } from 'react'
 import UserCard from './UserCard'
 import usePagination from '../hook/usePagination'
 import './userList.css'
-import { useEffect } from 'react'
 
 function UserList({users, openEdit, deleteUser, resetPage, setResetPage}) {
 
@@ -11,7 +10,6 @@ function UserList({users, openEdit, deleteUser, resetPage, setResetPage}) {
 
    const [page, maxPage, onPrev, onNext, currentPageItems, itemBtn, onClickPage] = usePagination(itemsPerPage, totalItems, users)
 
-
    useEffect(() => {
       if (resetPage) {
         onClickPage(1)
@@ -19,9 +17,6 @@ function UserList({users, openEdit, deleteUser, resetPage, setResetPage}) {
       }
     }, [resetPage, onClickPage, setResetPage])
   
-    
-
-
    const users_ordered = users?.length ? currentPageItems.sort((a, b) => a.last_name.localeCompare(b.last_name)) : [];
 
   return (<>
